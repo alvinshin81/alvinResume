@@ -8,10 +8,21 @@
     <link rel="icon" type="image/png" href="./rsc/alvin.png">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <script>
+      const imgElement = document.querySelector('img[alt="역량"]');
+      const newSection = document.querySelector('#new-section');
+
+      imgElement.addEventListener('click', () => {
+        const newParagraph = document.createElement('p');
+        newParagraph.innerText = '새로운 내용이 추가되었습니다.';
+        newSection.appendChild(newParagraph);
+      });
+
+    </script>
     <style>
         /* 꾸미기 */
         .card {
@@ -40,51 +51,55 @@
             margin: 10px;
         }
 
+
     </style>
 </head>
 
 <body>
-    <div class="hero bg-dark text-center py-5" style="margin-bottom: 50px;">
-        <h1 class="text-white">앨빈의 웹사이트 꾸미기</h1>
-        <h2 class="text-white">이력서 만들어보기</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-4">
+<div class="hero bg-dark text-center py-5" style="margin-bottom: 50px;">
+    <h1 class="text-white">앨빈의 웹사이트 꾸미기</h1>
+    <h2 class="text-white">이력서 만들어보기</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="./rsc/notebook.jpeg" class="card-img-top" alt="A회사">
-              <div class="card-body">
-                <h5 class="card-title">A회사</h5>
-                <h6 class="card-subtitle mb-2 text-muted">2009. 2. 2 ~ 2018. 5. 24</h6>
-                <p class="card-text">A회사 주요 이력</p>
-                <a href="LGE.html" class="card-link stretched-link" target="_blank"></a>
-              </div>
+                <img src="./rsc/notebook.jpeg" class="card-img-top" alt="A회사">
+                <div class="card-body">
+                    <h5 class="card-title">A회사</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">2009. 2. 2 ~ 2018. 5. 24</h6>
+                    <p class="card-text">A회사 주요 이력</p>
+                    <a href="LGE.html" class="card-link stretched-link" target="_blank"></a>
+                </div>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="https://source.unsplash.com/1600x900/?chair" class="card-img-top" alt="의자">
-              <div class="card-body">
-                <h5 class="card-title">A회사</h5>
-                <h6 class="card-subtitle mb-2 text-muted">2018. 6. 4 ~ 현재</h6>
-                <p class="card-text">B회사 주요 이력</p>
-                <a href="https://spartacodingclub.kr/" class="card-link stretched-link" target="_blank"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card">
-              <img src="https://source.unsplash.com/1600x900/?laptop" class="card-img-top" alt="노트북">
-              <div class="card-body">
-                <h5 class="card-title">skill book</h5>
-                <h6 class="card-subtitle mb-2 text-muted">핵심 성과 및 역량</h6>
-                <p class="card-text">성과/역략 기술</p>
-                <a href="https://spartacodingclub.kr/" class="card-link stretched-link" target="_blank"></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/1600x900/?chair" class="card-img-top" alt="B회사">
+                <div class="card-body">
+                    <h5 class="card-title">B회사</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">2018. 6. 4 ~ 현재</h6>
+                    <p class="card-text">B회사 주요 이력</p>
+                    <a href="https://spartacodingclub.kr/" class="card-link stretched-link" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://source.unsplash.com/1600x900/?laptop" class="card-img-top" alt="역량">
+                <div class="card-body">
+                    <h5 class="card-title">skill book</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">핵심 성과 및 역량</h6>
+                    <p class="card-text">성과/역량 기술</p>
+                    <a href="#" class="card-link stretched-link" onclick="createTable()">Link</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="new-section"></div>
+
+</div>
 
 </body>
 
