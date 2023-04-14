@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alvin's Home</title>
     <link rel="icon" type="image/png" href="./rsc/alvin.png">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
@@ -14,8 +13,189 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="./js/includeHTML.js"></script>
-    <frameset rows="700,*" frameborder="0" scrolling="yes">
-        <frame src="./article.html">
-            <frame src="./article_home.html" name="bottom">
-    </frameset>
+
+
+    <!-- <script>
+        window.addEventListener('load', function () {
+            const image = document.getElementById('kakao');
+            const body = document.querySelector('body');
+
+            image.addEventListener('click', function () {
+                const newSection = document.createElement('div');
+                newSection.setAttribute('id', 'new-section');
+                body.appendChild(newSection);
+            });
+        });
+
+    </script> -->
+    <!-- <script>
+        // jQuery 코드
+        $(document).ready(function () {
+            // 이미지 클릭 이벤트를 바인딩합니다.
+            $("#kakao").click(function () {
+                // 클릭 시 생성될 div를 변수에 저장합니다.
+                var newDiv = $('<div class="lge">새로 생성된 div</div>');
+                // 생성된 div를 하단 container에 추가합니다.
+                $(".container").append(newDiv);
+            });
+        });
+
+    </script> -->
+    <style>
+        /* 꾸미기 */
+        .card {
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .home-btn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: #eee;
+            border-radius: 50%;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .home-btn img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        let isClicked = false;
+        const linkCard = document.querySelector(".link_card");
+        const mArticle = document.createElement("p");
+        mArticle.textContent = "Create mArticle here";
+
+        linkCard.addEventListener("click", () => {
+            if (!isClicked) {
+                document.querySelector("div").appendChild(mArticle);
+                isClicked = true;
+            }
+        });
+    </script>
+    <a href="index.html" class="home-btn">
+        <img src="rsc/home-icon.png" alt="Home"/>
+    </a>
 </head>
+<!-- <script>
+    var tableCreated = false; // 테이블이 생성되었는지 여부를 저장하는 변수
+
+    function createTable() {
+        // 이미 생성된 테이블이 없는 경우에만 실행
+        if (!tableCreated) {
+            var body = document.getElementsByTagName("body")[0];
+            var table = document.createElement("table");
+            var tableBody = document.createElement("tbody");
+
+            for (var i = 0; i < 3; i++) {
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 2; j++) {
+                    var cell = document.createElement("td");
+                    var cellText = document.createTextNode("cell in row " + i + ", column " + j);
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                }
+
+                tableBody.appendChild(row);
+            }
+
+            table.appendChild(tableBody);
+            body.appendChild(table);
+
+            tableCreated = true; // 테이블이 생성되었음을 표시
+        }
+    }
+
+    document.getElementById("kakao").addEventListener("click", createTable);
+
+</script> -->
+
+<body>
+    <div class="hero bg-dark text-center py-5" style="margin-bottom: 50px;">
+        <h1 class="text-white">앨빈의 웹사이트 꾸미기</h1>
+        <h2 class="text-white">웹사이트 만들어보기</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./rsc/notebook.jpeg" class="card-img-top" alt="A회사">
+                    <div class="card-body">
+                        <h5 class="card-title">A주제</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2009. 2. 2 ~ 2018. 5. 24</h6>
+                        <p class="card-text">A주제 html 링크</p>
+                        <a href="LGE.html" class="card-link stretched-link" target="_blank"></a>
+                    </div>
+                </div>
+                <!-- 여기 -->
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/1600x900/?chair" class="card-img-top" id="kakao" alt="B회사">
+                    <div class="card-body">
+                        <h5 class="card-title">B주제</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2018. 6. 4 ~ 현재</h6>
+                        <p class="card-text">B주제 하단 mArticle 생성</p>
+                        <!-- <a class="link_card"></a> -->
+                        <!-- <a href="https://spartacodingclub.kr/" class="card-link stretched-link" target="_blank"></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" id="skill">
+                    <img src="https://source.unsplash.com/1600x900/?laptop" class="card-img-top" alt="역량">
+                    <div class="card-body">
+                        <h5 class="card-title">skill book</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">핵심 성과 및 역량</h6>
+                        <p class="card-text">성과/역량 기술</p>
+                        <!-- <a href="https://spartacodingclub.kr/" class="card-link stretched-link" target="_blank"></a> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- 여기에 생성 -->
+        <script>
+            const skillCard = document.querySelector('#skill');
+
+            skillCard.addEventListener('click', () => {
+            const mArticle = document.createElement('div');
+            mArticle.classList.add('mArticle');
+            mArticle.innerHTML = '<object type="text/html" data="./LGE_article.html"></object>';
+
+            document.querySelector('body').appendChild(mArticle);
+            });
+        </script>
+        <script>
+
+            const kakaoCard = document.querySelector('#kakao');
+
+            kakaoCard.addEventListener('click', () => {
+            const mArticle = document.createElement('div');
+            mArticle.classList.add('mArticle');
+            mArticle.innerHTML = '<object type="text/html" data="./LGE.html"></object>';
+
+            document.querySelector('body').appendChild(mArticle);
+            });
+        </script>
+    </div>
+
+</body>
+<script>
+    includeHTML();
+</script>
+
+</html>
