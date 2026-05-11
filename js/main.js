@@ -13,19 +13,31 @@ window.addEventListener('scroll', () => {
 });
 
 // ── Career duration ───────────────────────────────────────────────────────────
-(function () {
-    const start = { year: 2009, month: 2 };
-    const now = new Date();
-    const curYear = now.getFullYear();
-    const curMonth = now.getMonth() + 1;
-
-    let years = curYear - start.year;
-    let months = curMonth - start.month;
+function calcDuration(startStr, endStr) {
+    const [sy, sm] = startStr.split('-').map(Number);
+    let ey, em;
+    if (endStr) {
+        [ey, em] = endStr.split('-').map(Number);
+    } else {
+        ey = new Date().getFullYear();
+        em = new Date().getMonth() + 1;
+    }
+    em += 1; // 시작월·종료월 모두 포함
+    if (em > 12) { ey++; em = 1; }
+    let years = ey - sy;
+    let months = em - sm;
     if (months < 0) { years--; months += 12; }
+    return months > 0 ? `${years}년 ${months}개월` : `${years}년`;
+}
 
-    const text = months > 0 ? `${years}년 ${months}개월` : `${years}년`;
-    document.getElementById('careerDuration').textContent = text;
-})();
+// Hero 총 경력
+document.getElementById('careerDuration').textContent = calcDuration('2009-02');
+
+// Experience 각 회사 경력
+document.querySelectorAll('[data-exp-start]').forEach(el => {
+    el.querySelector('.exp-duration').textContent =
+        `(${calcDuration(el.dataset.expStart, el.dataset.expEnd)})`;
+});
 
 // ── Projects ─────────────────────────────────────────────────────────────────
 const projects = [

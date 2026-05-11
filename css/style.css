@@ -130,6 +130,12 @@ body {
     justify-self: center;
 }
 
+.exp-duration {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
 /* Skills */
 .skill-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
