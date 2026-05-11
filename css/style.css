@@ -110,7 +110,7 @@ body {
 /* Experience — 2×2 grid header */
 .exp-header {
     display: grid;
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: max-content 1fr;
     grid-template-rows: auto auto;
     column-gap: 12px;
     row-gap: 4px;

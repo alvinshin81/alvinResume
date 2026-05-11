@@ -12,6 +12,21 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// ── Career duration ───────────────────────────────────────────────────────────
+(function () {
+    const start = { year: 2009, month: 2 };
+    const now = new Date();
+    const curYear = now.getFullYear();
+    const curMonth = now.getMonth() + 1;
+
+    let years = curYear - start.year;
+    let months = curMonth - start.month;
+    if (months < 0) { years--; months += 12; }
+
+    const text = months > 0 ? `${years}년 ${months}개월` : `${years}년`;
+    document.getElementById('careerDuration').textContent = text;
+})();
+
 // ── Projects ─────────────────────────────────────────────────────────────────
 const projects = [
     {
