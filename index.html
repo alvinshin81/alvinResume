@@ -24,9 +24,12 @@
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#competency">Competency</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#etc">기타</a></li>
                 </ul>
             </div>
         </div>
@@ -75,8 +78,27 @@
         </div>
     </section>
 
+    <!-- Competency -->
+    <section id="competency" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Competency</h2>
+            <div class="competency-grid">
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>신모델/전사 QA 프로세스 수립 및 관리</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>신기능/변경점 테스트 케이스 및 시나리오 작성·관리</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>Open API 테스트 프로세스 구축 및 실행 (Postman)</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>자동화 테스트 도입 및 관리 (Python, Selenium)</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>프로젝트 단계별 SW QA 매니저로서 주도적 업무 수행</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>유관 부서 및 조직과의 유기적인 커뮤니케이션</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>신모델 SW품질보증 모델 리더 경험 (Nexus4, G Watch 등)</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>Global 검증 조직 교육 및 테스트 프로세스 개선</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>Google Nexus·Watch 프로젝트 주도 및 SW 안정화</span>
+                <span class="competency-item"><i class="bi bi-check2-circle me-2"></i>어학연수(1년) 및 해외 출장 11회 — 글로벌 커뮤니케이션</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience -->
-    <section id="experience" class="section-padding bg-light">
+    <section id="experience" class="section-padding bg-white">
         <div class="container">
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
@@ -86,14 +108,15 @@
                     <div class="timeline-dot"></div>
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="exp-left">
+                                    <img src="./rsc/kakao.svg" alt="Kakao" class="exp-logo">
+                                    <span class="badge bg-primary exp-badge">2018.06 ~ 현재</span>
+                                </div>
                                 <div>
                                     <h5 class="card-title mb-1">QA Engineer &nbsp;·&nbsp; Senior Manager / Lead</h5>
-                                    <h6 class="text-primary mb-0">
-                                        <img src="./rsc/kakao.svg" alt="Kakao" height="16" class="me-1">카카오 &nbsp;·&nbsp; 서비스QA파트
-                                    </h6>
+                                    <h6 class="text-primary mb-0">카카오 &nbsp;·&nbsp; 서비스QA파트</h6>
                                 </div>
-                                <span class="badge bg-primary mt-1">2018.06 ~ 현재</span>
                             </div>
                             <p class="text-muted small mt-2 mb-2">광고사업부문 유닛 리더 / QA 매니저 / 구글 모바일스토어 관리 / 1차 인터뷰어</p>
                             <hr class="my-2">
@@ -114,19 +137,21 @@
                     <div class="timeline-dot"></div>
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="exp-left">
+                                    <img src="./rsc/lge.svg" alt="LGE" class="exp-logo">
+                                    <span class="badge bg-secondary exp-badge">2009.02 ~ 2018.05</span>
+                                </div>
                                 <div>
                                     <h5 class="card-title mb-1">QA Engineer</h5>
-                                    <h6 class="text-primary mb-0">
-                                        <img src="./rsc/lge.svg" alt="LGE" height="16" class="me-1">LG전자 &nbsp;·&nbsp; 서비스QA파트
-                                    </h6>
+                                    <h6 class="text-primary mb-0">LG전자 &nbsp;·&nbsp; SW인정1팀</h6>
                                 </div>
-                                <span class="badge bg-secondary mt-1">2009.02 ~ 2018.05 &nbsp;(9년 4개월)</span>
                             </div>
                             <p class="text-muted small mt-2 mb-2">신규 모델 SW QA 기획 및 관리 — 21개 프로젝트 / 70여개 모델 (LG G6, Nexus4 등)</p>
                             <hr class="my-2">
                             <ul class="mb-0">
                                 <li>Use Case·시나리오 기반 QA 기획·실행 및 단계별 리포트·리스크 항목 도출 (파레토 차트, 이슈 흐름 분석)</li>
+                                <li>Android Smartphone Call/PIM Checklist 신규 개발·유지보수 및 시장불량 예측 품질평가 Tool 개발</li>
                                 <li>Google Nexus 협업 프로세스 정립 — 이슈 수정률 <strong>25.1% → 45.2%</strong>, 중복이슈 <strong>35.4% → 3.2%</strong> 감소</li>
                                 <li>Pairwise·TRIZ 기법 활용 TC 효율화 및 신규 시험법 도출</li>
                                 <li>글로벌 검증 조직 교육 진행 — 한국·미국·인도 마스터 교육 강사, 이스라엘 현지 조직 Setup</li>
@@ -214,6 +239,116 @@
                 <!-- 2단: 상세 정보 -->
                 <div class="col-lg-8 project-detail-col">
                     <div id="projectDetail"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Philosophy</h2>
+            <div class="row g-4 align-items-start">
+
+                <div class="col-md-6">
+                    <div class="philosophy-card card shadow-sm">
+                        <div class="card-body">
+                            <div class="philosophy-icon"><i class="bi bi-award-fill"></i></div>
+                            <h6 class="philosophy-title">전문성</h6>
+                            <p class="philosophy-text">QA 업무에 대한 기술·경험·역량을 기반으로 매니징, 엔지니어링, 테스팅 측면의 지속적인 개선으로 테스트 커버리지 확대를 도모합니다. 유닛 리더로서 서비스별 적합한 테스트 방법론을 발굴·적용하여 품질 강화 활동에 기여합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="philosophy-card card shadow-sm">
+                        <div class="card-body">
+                            <div class="philosophy-icon"><i class="bi bi-lightning-fill"></i></div>
+                            <h6 class="philosophy-title">혁신</h6>
+                            <p class="philosophy-text">QA 프로세스를 기반으로 프로젝트 시작부터 끝까지 주도적으로 리딩하고 가이드를 제공함으로써 품질 안정화 수준을 높입니다. 신기술 도입과 프로세스 개선을 동료들과 함께 지속적으로 추진합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="philosophy-card card shadow-sm">
+                        <div class="card-body">
+                            <div class="philosophy-icon"><i class="bi bi-chat-dots-fill"></i></div>
+                            <h6 class="philosophy-title">커뮤니케이션</h6>
+                            <p class="philosophy-text">시니어·주니어 동료들과 협업하며 QA에 적용 가능한 신기술을 지속적으로 발굴합니다. 유관부서와의 유기적인 상호 작용으로 서비스 품질 향상을 도모하고, 동시복합적으로 발생하는 QA 과제에 대해 스케줄링과 리소스 분배를 효율적으로 해결합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="philosophy-card card shadow-sm">
+                        <div class="card-body">
+                            <div class="philosophy-icon"><i class="bi bi-people-fill"></i></div>
+                            <h6 class="philosophy-title">조직 / 사람 영향력</h6>
+                            <p class="philosophy-text">인터뷰어로서 부서에 필요한 인재를 지속적으로 발굴·영입하고, 질문·커뮤니케이션·인터뷰 역량을 강화하여 최적의 인재 영입에 기여합니다. 지식과 기술을 공유·전파함으로써 동료들과 함께 성장하는 문화를 이어갑니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 기타 -->
+    <section id="etc" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">기타</h2>
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i>학력</h6>
+                            <ul class="list-unstyled etc-list mb-0">
+                                <li>
+                                    <span class="etc-period">2000.03 ~ 2009.02</span>
+                                    <span class="etc-content">중앙대학교 전자전기공학부 졸업 (학사)</span>
+                                </li>
+                                <li>
+                                    <span class="etc-period">1997.03 ~ 2000.02</span>
+                                    <span class="etc-content">동원고등학교 졸업</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-shield-fill text-primary me-2"></i>병역</h6>
+                            <ul class="list-unstyled etc-list mb-0">
+                                <li>
+                                    <span class="etc-period">2001.11 ~ 2003.01</span>
+                                    <span class="etc-content">의경 병장 만기 제대</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-patch-check-fill text-primary me-2"></i>자격증</h6>
+                            <ul class="list-unstyled etc-list mb-0">
+                                <li>
+                                    <span class="etc-period">2011.12</span>
+                                    <span class="etc-content">ISTQB Foundation Level</span>
+                                </li>
+                                <li>
+                                    <span class="etc-period">2016.04</span>
+                                    <span class="etc-content">TRIZ Level I</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
             </div>
