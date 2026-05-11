@@ -107,24 +107,27 @@ body {
     box-shadow: 0 0 0 2px var(--primary);
 }
 
-/* Experience — logo + badge column */
-.exp-left {
-    display: flex;
-    flex-direction: column;
+/* Experience — 2×2 grid header */
+.exp-header {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 4px;
     align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
 }
 
 .exp-logo {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 28px;
     object-fit: contain;
+    justify-self: center;
 }
 
 .exp-badge {
     font-size: 0.7rem;
     white-space: nowrap;
+    justify-self: center;
 }
 
 /* Skills */
